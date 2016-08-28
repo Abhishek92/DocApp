@@ -6,13 +6,28 @@ package com.android.docapp.symptomChecker;
 public class ToddSyndromChecker {
 
     private static ToddSyndromChecker ourInstance = new ToddSyndromChecker();
-    public static ToddSyndromChecker getInstance() {
-        return ourInstance;
-    }
 
     private ToddSyndromChecker() {
     }
 
+    /**
+     * Get singleton instance of symptom checker
+     *
+     * @return
+     */
+    public static ToddSyndromChecker getInstance() {
+        return ourInstance;
+    }
+
+    /**
+     * Return todd's syndrom probabillity
+     *
+     * @param age
+     * @param migraine
+     * @param male
+     * @param hallucinogenicDrugs
+     * @return
+     */
     public int checkToddSyndrome(int age, boolean migraine, boolean male, boolean hallucinogenicDrugs)
     {
         int probability = 0;
